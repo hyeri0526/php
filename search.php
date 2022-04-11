@@ -29,9 +29,9 @@
 </nav>
 <br>
 <div class="container" algin="left">  
-  <form class="form-inline" action="/action_page.php">
-    <label for="email"> &nbsp;검색 : &nbsp;</label>
-    <input type="email" class="form-control" id="search" placeholder="검색할 키워드" name="email">    
+  <form class="form-inline" action="/action_page.php" method="POST"> <!-- 보내는 방식 지정하지 않으면 Get -->
+    <label for="keyword"> &nbsp;검색 : &nbsp;</label>
+    <input type="text" class="form-control" id="search" placeholder="검색할 키워드" name="keyword">    
     &nbsp;
     <button type="submit" class="btn btn-primary"> 검색 </button>
   </form>
