@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">hyeri's</a>
+  <a class="navbar-brand" href="/">hyeri's</a>
   
   <!-- Links -->
   <ul class="navbar-nav">

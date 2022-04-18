@@ -12,12 +12,12 @@
 <body>
 
 <?php 
-include 'menu.php' // 메뉴 파일을 포함
+  include 'menu.php' // 메뉴 파일을 포함
 ?>
 
 <div class="container-fluid">
   
-  <?php
+<?php
 	for($i=1; $i<=10; $i=$i+1)
 	{
 		echo $i."hello world! <br />";

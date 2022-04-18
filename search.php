@@ -11,10 +11,10 @@
 </head>
 <body>
 <?php 
-include 'menu.php'
+  include 'menu.php'
 ?>
 <br>
-<div class="container" algin="left">  
+<div class="container" style='float: left;'>  <!-- 왼쪽 정렬-->
   <form class="form-inline" action="/action_page.php" method="POST"> <!-- 보내는 방식 지정하지 않으면 Get -->
     <label for="keyword"> &nbsp;검색 : &nbsp;</label>
     <input type="text" class="form-control" id="search" placeholder="검색할 키워드" name="keyword">    
