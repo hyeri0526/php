@@ -10,25 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">hyeri's</a>
-  
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">메인</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/hello.php">헬로월드</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/search.php">검색</a>
-    </li>
-  </ul>
-</nav>
-
+<?php 
+include 'menu.php'
+?>
 <div class="container-fluid">
   <h3>hyeri's php project site</h3>
 </div>

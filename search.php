@@ -10,23 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- logo -->
-  <a class="navbar-brand" href="/">hyeri's</a>
-  
-  <!-- menu -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">메인</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/hello.php">헬로월드</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/search.php">검색</a>
-    </li>
-  </ul>
-</nav>
+<?php 
+include 'menu.php'
+?>
 <br>
 <div class="container" algin="left">  
   <form class="form-inline" action="/action_page.php" method="POST"> <!-- 보내는 방식 지정하지 않으면 Get -->

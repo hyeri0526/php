@@ -11,23 +11,9 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- logo -->
-  <a class="navbar-brand" href="/">hyeri's</a>
-  
-  <!-- menu -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/">메인</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/hello.php">헬로월드</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/search.php">검색</a>
-    </li>
-  </ul>
-</nav>
+<?php 
+include 'menu.php' // 메뉴 파일을 포함
+?>
 
 <div class="container-fluid">
   
