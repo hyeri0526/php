@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>메인 페이지</title>
+  <title>검색결과</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -19,13 +19,10 @@
     include 'db.php';
     $keyword = $_POST["keyword"];
     insert_keyword($keyword); //db.php의 함수 호출
-    echo $keyword."<br>"; 
+    //echo $keyword."<br>"; 
+    header("location: /slist.php");
 ?>
 
-<?php 
-    echo " 지금까지 입력된 검색어:<br>";
-    select_keyword();  //db.php의 함수 호출
-    ?>
 </body>
 </html>
 

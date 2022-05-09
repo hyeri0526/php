@@ -21,6 +21,7 @@
     }   
     
     function select_keyword(){ //조회함수
+        $retlist = array();//db에 리스트를 전달
         $conn = dbconn(); // dbconfig.php의 함수 호출,db연결
         /* DB 연결 확인 */
         //if($conn){ echo "Connection established"."<br>"; }
@@ -28,10 +29,11 @@
         
         /* SELECT 예제 */
         $sql = "SELECT * FROM keyword";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql);        
         while($row = mysqli_fetch_array($result)){
-            echo $row['keyword']."<br>";
+            array_push($retlist, $row['keyword']."/".$row['cnt']); //키워드와 카운트값을 리스트에 넣기
         }        
         mysqli_close($conn);
+        return $retlist;
     }
 ?>

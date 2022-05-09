@@ -19,9 +19,19 @@
     <label for="keyword"> &nbsp;검색 : &nbsp;</label>
     <input type="text" class="form-control" id="search" placeholder="검색할 키워드" name="keyword">    
     &nbsp;
-    <button type="submit" class="btn btn-primary"> 검색 </button>
+    <button type="submit" class="btn btn-primary" id="submit"> 검색 </button>
   </form>
 </div>
-
 </body>
+  <script>	// 검색어를 입력하지 않고 검색버튼 눌렀을때
+	  $(document).ready(function(){ 
+		  $("#submit").click(function(){
+				if($("#search").val().length == 0){ 
+          alert("검색어를 입력하세요."); 
+          $("#search").focus(); 
+          return false; 
+        }				
+			});		
+  	});
+	</script>
 </html>
