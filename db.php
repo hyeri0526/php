@@ -32,7 +32,19 @@
         $result = mysqli_query($conn, $sql);        
         while($row = mysqli_fetch_array($result)){
             array_push($retlist, $row['keyword']."/".$row['cnt']); //키워드와 카운트값을 리스트에 넣기
-        }        
+        } 
+        mysqli_close($conn);
+        return $retlist;
+    }
+
+    function json_keyword(){ //키워드와 카운트를 json포맷으로 배열에 넣기
+        $retlist = array();//db에 리스트를 전달
+        $conn = dbconn();
+        $sql = "SELECT * FROM keyword";
+        $result = mysqli_query($conn, $sql);        
+        while($row = mysqli_fetch_array($result)){
+            array_push($retlist, array("keyword" => $row['keyword'], "cnt" => $row['cnt'])); //키워드와 카운트값을 리스트에 넣기
+        }
         mysqli_close($conn);
         return $retlist;
     }
