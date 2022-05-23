@@ -58,7 +58,7 @@
             html += "<tr><td>"+ field["keyword"]+"</td><td>"+field["cnt"]+"</td></tr>";
            });
           $("tbody").html(html); // json포맷 출력하기
-        });				
+        });
 			});		
   	});
 	</script>
