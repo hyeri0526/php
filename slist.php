@@ -14,10 +14,20 @@
 </head>
 <body>
 <?php 
-  include 'menu.php'
+  include 'menu.php';
+  session_start(); //서버에 클라이언트 정보 저장공간: 세션
+  if(!isset($_SESSION['userid'])) {  //세션에 값이 없으면, 즉 로그인이 안되어있으면
+      echo "<script>location.replace('login.php');</script>";            
+  }
+
+  else {
+      $userid = $_SESSION['userid'];
+      $username = $_SESSION['username'];
+  } 
 ?>
 
 <div class="container">
+  <h4> <? echo $username. "님 반갑습니다." ?></h4>
   <p><center><h4>지금까지 검색 리스트</h4></center></p>
   <table class="table table-hover">
     <thead>
@@ -93,20 +103,20 @@
 //수정 함수
 function modi(){
   var ret = confirm("수정 할래?");
-  if (ret != true) {
-    //alert("삭제 되었습니다");
+  if (ret != true) {    
     return;
   }
   // 모달창 텍스트 박스 값 읽기
   var seq = $("#seq").val();
   var keyword = $("#kw").val();
+  
   // 데이터 보내기
   $.post("modikeyword.php",
   {
-    seq: seq,
-    keyword: keyword
+    seq: seq,  // 키:함수의 매개변수
+    keyword: keyword  // 키:함수의 매개변수
   },
-  function(data, tatus){
+  function(data, status){
     if (data == 1) {
       alert("수정 되었습니다.");
     } else {

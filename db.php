@@ -42,6 +42,14 @@
         return $result;
     }
 
+    function update_keyword($seq, $keyword){ //수정 함수        
+        $conn = dbconn(); // dbconfig.php의 함수 호출,db연결        
+        $sql = "update keyword set keyword='$keyword', cnt = 1 WHERE seq=$seq"; // $keyword는 문자열이라 따옴표, 수정시 검색횟수 1
+        $result = mysqli_query($conn, $sql);
+        mysqli_close($conn);
+        return $result;
+    }
+
     function json_keyword(){ //키워드와 카운트를 json포맷으로 배열에 넣기
         $retlist = array();//db에 리스트를 전달
         $conn = dbconn();
