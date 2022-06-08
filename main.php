@@ -18,8 +18,6 @@
   <h3>hyeri's php project site</h3>
   <img src = "https://i.pinimg.com/736x/6e/b2/8d/6eb28d3cd98a0303f366f3e27c6c4cfd.jpg">
 </div>
-<script>
-  location.href="/controller.php?mode=main"; 
-</script>
+
 </body>
 </html>
